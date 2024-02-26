@@ -1,11 +1,11 @@
 .container-fluid{
     background: #acccdf;
+    padding: 0.5rem 0;
 }
 table{
     border-collapse: collapse;
     width: 100%;
     table-layout: fixed;
-    
 }
 th, td{
     padding: 0.5rem;
@@ -13,11 +13,14 @@ th, td{
     border-bottom: 1px solid #ddd;
     border-right: 1px solid #ddd;
     overflow: hidden;
-    white-space: nowrap;
+    white-space: wrap;
     text-overflow: ellipsis;
 }
 
-
+.btn-danger:hover{
+    background: transparent;
+    box-shadow: 0 0 20px 5px red;
+}
 
 
 

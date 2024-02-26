@@ -35,29 +35,27 @@ const Carga = () => {
     return (
         <>
             <form className="container" onSubmit={store}>
-                <div className='lugar_fecha'>
+                <div className='lugar'>
                     <label htmlFor="fecha">Seleccione la fecha</label>
                     <input type="date" id="fecha" value={fecha} onChange={(e) => setFecha(e.target.value)} />
-                    <br />
-                    <label htmlFor="lugar" id='lugar_novedad'>Lugar de Novedad</label>
-                    <input type="text" id='lugar' value={lugar} onChange={(e) => setLugar(e.target.value)} />
-                    <br />
+                    <label htmlFor="lugar">Lugar de Novedad</label>
+                    <input type="text" id="lugar" value={lugar} onChange={(e) => setLugar(e.target.value)} />
                     <label htmlFor="tipo_novedad">Tipo de Novedad</label>
                     <input id="tipo_novedad" type='text' value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)} />
                 </div>
                 <div className='personal_unidad'>
                     <label htmlFor="comisaria">Comisaria de Competencia</label>
                     <input type='text' id='comisaria' value={comisaria} onChange={(e) => setComisaria(e.target.value)} />
-                    <br />
+
                     <label htmlFor="unidad">Numero de Unidad</label>
                     <input id='unidad' type='text' value={unidad} onChange={(e) => setUnidad(e.target.value)} />
-                    <br />
+
                     <label htmlFor="personal">Personal Interviniente</label>
                     <input type="text" id="personal" value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)} />
                 </div>
                 <div className='resumen'>
                     <label htmlFor='resumen_novedad' >Resumen de Novedad</label>
-                    <textarea type="text" id="resumen_novedad" value={resumen} onChange={(e) => setResumen(e.target.value)} />
+                    <textarea type="text" id="resumen_novedad" value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4} />
                 </div>
                 <button className='btn btn-save' type="submit" >Guardar</button>
             </form>

@@ -4,5 +4,15 @@
   text-align: center;
 }
 
+.btn-download{
+   border-color: gray;
+    width: auto;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.btn-download:hover{
+  background: transparent;
+  box-shadow: 0 0 20px 5px gray;
+}
 
 

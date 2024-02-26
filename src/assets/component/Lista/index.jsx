@@ -21,6 +21,8 @@ const Lista = () => {
         await axios.delete(`${URI}${id}`)
         getNovedades()
     }
+
+    
     return (
         <>
             <div className="container-fluid">
