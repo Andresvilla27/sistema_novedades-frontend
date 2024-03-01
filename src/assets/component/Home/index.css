@@ -1,4 +1,24 @@
-
+.logo-upm{
+    width: 50px;
+    border-radius: 26px 26px;
+    display: inline-flex;
+    position: relative;
+    margin-right: 3rem;
+}
+.logo-utm{
+    width: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    position: relative;
+    margin-right: 6rem;
+}
+.logo-policia-1{
+    width: 50px;
+    border-radius: 20%;
+    display: inline-flex;
+    position: relative;
+    margin-left: 6rem;
+}
  ul{
     display: flex;
     justify-content: center;
@@ -16,7 +36,7 @@
     height: 50px;
     color: #000;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 25px;
     overflow: hidden;
     position: relative;

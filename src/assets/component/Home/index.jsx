@@ -4,12 +4,21 @@ import Carga from '../Carga/index'
 import Lista from '../Lista';
 
 
-const Home = () => {
+// eslint-disable-next-line react/prop-types
+function Home ({nombre, setNombre})  {
+    const handleLogout = () => {
+        setNombre([])
+    }
     return (
         <div className='container-fluid home'>
+            <img src="src/assets/img/logo-upm.jpeg" alt="logo-upm" className='logo-upm' />
+            <img src="src/assets/img/logo-utm.jpeg" alt="logo-utm" className='logo-utm'/>
+            <span>Usuario: {nombre} </span>
+            <img src="src/assets/img/logo-policia-1.jpeg" alt="logo-policia" className='logo-policia-1'/>
+            <button className='btn' onClick={handleLogout}>Logout</button>
             <h2>Sistema de Novedades</h2>
             <p>En este sitio usted podra realizar la carga de sus actividades,
-                tambien podra visualizarlas en orden de registro y al final elaborar un informe.
+                tambien podra visualizarlas en orden de registro.
             </p>
             <h5>A continuacion seleccione una opcion:</h5>
             <ul className="d-flex container-sm-12" >

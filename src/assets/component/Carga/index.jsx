@@ -34,7 +34,7 @@ const Carga = () => {
     }
     return (
         <>
-            <form className="container" onSubmit={store}>
+            <form className="container-carga" onSubmit={store}>
                 <div className='lugar'>
                     <label htmlFor="fecha">Seleccione la fecha</label>
                     <input type="date" id="fecha" value={fecha} onChange={(e) => setFecha(e.target.value)} />

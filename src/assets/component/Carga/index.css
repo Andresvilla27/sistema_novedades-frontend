@@ -1,4 +1,4 @@
-.container{
+.container-carga{
     display: flex;
     flex-wrap: wrap;
 }
@@ -8,13 +8,14 @@
     padding: 1rem;
 }
 
-
 .personal_unidad{
     flex: 1 0 10px;
+    padding: 1rem;
 }
 
 .resumen{
     flex: 1 0 10px;
+    
 }
 .btn{
     border-color: cadetblue;
