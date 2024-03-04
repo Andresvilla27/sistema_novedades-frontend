@@ -1,15 +1,13 @@
+/* eslint-disable react/prop-types */
 import axios from 'axios'
 import { useState } from 'react';
 import './index.css';
-import Home from '../home';
-
-
 
 
 
 function Login ({setUser}) {
   const [username, setUsername] = useState('');
-  const [nombre, SetNombre] = useState('')
+  const [user, SetUSer] = useState('')
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
@@ -19,15 +17,16 @@ function Login ({setUser}) {
     try {
       const response = await axios.post('http://localhost:8000/login', {
         username,
-        password
+        password,
+        user
       });
       if(username === '' || password === ''){
         setError(true)
         return
       }
       setError(false)
-      setUser([nombre])
-      console.log(response.data);
+      setUser([user])
+      console.log(response.data.user);
     } catch (error) {
       setError('Invalid username or password');
     }

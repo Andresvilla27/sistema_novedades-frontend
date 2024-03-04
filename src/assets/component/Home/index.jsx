@@ -2,18 +2,23 @@ import './index.css'
 import { Outlet, Link } from 'react-router-dom';
 import Carga from '../Carga/index'
 import Lista from '../Lista';
+import Registro from '../Registro';
 
 
-// eslint-disable-next-line react/prop-types
-function Home ({nombre, setNombre})  {
+
+// eslint-disable-next-line react/prop-types, no-unused-vars
+function Home ({user, setUser})  {
+        
+
+    
     const handleLogout = () => {
-        setNombre([])
+        setUser([])
     }
     return (
-        <div className='container-fluid home'>
+        <div className='container-fluid  home'>
             <img src="src/assets/img/logo-upm.jpeg" alt="logo-upm" className='logo-upm' />
             <img src="src/assets/img/logo-utm.jpeg" alt="logo-utm" className='logo-utm'/>
-            <span>Usuario: {nombre} </span>
+            <span>Usuario:</span>
             <img src="src/assets/img/logo-policia-1.jpeg" alt="logo-policia" className='logo-policia-1'/>
             <button className='btn' onClick={handleLogout}>Logout</button>
             <h2>Sistema de Novedades</h2>
@@ -21,9 +26,10 @@ function Home ({nombre, setNombre})  {
                 tambien podra visualizarlas en orden de registro.
             </p>
             <h5>A continuacion seleccione una opcion:</h5>
-            <ul className="d-flex container-sm-12" >
+            <ul className="d-flex" >
                 <li><Link className="btn btn-carga" to="/Carga" element={<Carga />} >Carga de Novedades</Link></li>
                 <li><Link className="btn btn-lista " to="/Lista" element={<Lista />} >Lista de Novedades</Link></li>
+                <li><Link className='btn' to="/Registro" element={<Registro />}>Registro Usuario</Link> </li>
             </ul>
             <hr />
             <Outlet />

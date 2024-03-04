@@ -5,20 +5,23 @@ import Login from './assets/component/Login'
 import Carga from './assets/component/Carga';
 import Lista from './assets/component/Lista';
 import { useState } from 'react';
+import Registro from './assets/component/Registro';
 
 
 function App() {
-  const [nombre, setNombre] = useState([]);
+  const [user, setUser] = useState([]);
+  
   return (
     <>
       {
-        !nombre.length > 0
-          ? <Login setUser={setNombre} />
+        !user.length > 0
+          ? <Login setUser={setUser} />
           : 
       <Routes>
-        <Route path='/' element={<Home nombre={nombre} setNombre={setNombre}/>} >
+        <Route path='/' element={<Home user={user} setUser={setUser}/>} >
           <Route path='Lista' element={<Lista />} />
           <Route path='Carga' element={<Carga />} />
+          <Route path='Registro' element={<Registro />} />
         </Route>
       </Routes>
       }

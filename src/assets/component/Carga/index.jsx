@@ -33,8 +33,9 @@ const Carga = () => {
         navigate('/Lista')
     }
     return (
-        <>
-            <form className="container-carga" onSubmit={store}>
+        <><div>
+
+            {/* <form className="container-carga container-fluid"  onSubmit={store}>
                 <div className='lugar'>
                     <label htmlFor="fecha">Seleccione la fecha</label>
                     <input type="date" id="fecha" value={fecha} onChange={(e) => setFecha(e.target.value)} />
@@ -58,7 +59,22 @@ const Carga = () => {
                     <textarea type="text" id="resumen_novedad" value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4} />
                 </div>
                 <button className='btn btn-save' type="submit" >Guardar</button>
+            </form> */}
+            
+            <form action="#" method="post" className="form-register" onSubmit={store}>
+                <h4 className="form-titulo">CARGA DE DATOS</h4>
+                <div className="contenedor-inputs">
+                    <input type="date" id="fecha" name="fecha" placeholder="fecha" className="input-48" required value={fecha} onChange={(e) => setFecha(e.target.value)}/>
+                    <input type="text" id="lugar" name="lugar" placeholder="lugar" className="input-48" required value={lugar} onChange={(e) => setLugar(e.target.value)}/>
+                    <input type="tipo_novedad" id="tipo_novedad" name="tipo_novedad" placeholder="tipo de novedad" className="input-48" required value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)}/>
+                    <input type="text" id="comisaria" name="comisaria" placeholder="Comisaria de competencia" className="input-48" required value={comisaria} onChange={(e) => setComisaria(e.target.value)}/>
+                    <input type="text" id="numero_unidad" name="numero_unidad" placeholder="Numero de Unidad" className="input-48" required value={unidad} onChange={(e) => setUnidad(e.target.value)}/>
+                    <input type="text" id="personal_interviniente" name="personal_interviniente" placeholder="Personal Interviniente" className="input-48" required value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)}/>
+                    <input type="text" name="resumen" id="resumen" placeholder='Resumen de Novedad' className='input-100' value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4}/>
+                    <input type="submit" value="Cargar" className=" btn btn-enviar" />
+                </div>
             </form>
+        </div>
         </>
     )
 }
