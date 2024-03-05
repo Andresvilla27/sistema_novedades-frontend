@@ -2,7 +2,7 @@ import './index.css'
 import { Outlet, Link } from 'react-router-dom';
 import Carga from '../Carga/index'
 import Lista from '../Lista';
-import Registro from '../Registro';
+
 
 
 
@@ -10,7 +10,6 @@ import Registro from '../Registro';
 function Home ({user, setUser})  {
         
 
-    
     const handleLogout = () => {
         setUser([])
     }
@@ -29,7 +28,6 @@ function Home ({user, setUser})  {
             <ul className="d-flex" >
                 <li><Link className="btn btn-carga" to="/Carga" element={<Carga />} >Carga de Novedades</Link></li>
                 <li><Link className="btn btn-lista " to="/Lista" element={<Lista />} >Lista de Novedades</Link></li>
-                <li><Link className='btn' to="/Registro" element={<Registro />}>Registro Usuario</Link> </li>
             </ul>
             <hr />
             <Outlet />
