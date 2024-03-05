@@ -4,7 +4,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import '../Lista/index.css'
 
-const URI = 'http://localhost:8000/novedades/'
+/* const URI = 'http://localhost:8000/novedades/' */
+const URI = 'https://backend-sistema-novedades-m8ej3zqaw-andresvilla27.vercel.app/'
 
 const Lista = () => {
     const [novedades, setNovedad] = useState([])
