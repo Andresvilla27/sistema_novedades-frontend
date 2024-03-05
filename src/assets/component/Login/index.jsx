@@ -7,8 +7,10 @@ import './index.css';
 
 function Login ({setUser}) {
   const [username, setUsername] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [user, SetUSer] = useState('')
   const [password, setPassword] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState('');
 
 
