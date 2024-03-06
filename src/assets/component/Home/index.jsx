@@ -15,10 +15,9 @@ function Home ({user, setUser})  {
     }
     return (
         <div className='container-fluid  home'>
-            <img src="src/assets/img/logo-upm.jpeg" alt="logo-upm" className='logo-upm' />
-            <img src="src/assets/img/logo-utm.jpeg" alt="logo-utm" className='logo-utm'/>
-            <span>Usuario:</span>
-            <img src="src/assets/img/logo-policia-1.jpeg" alt="logo-policia" className='logo-policia-1'/>
+            <img src="gs://back-imagenes.appspot.com/imagenes/logo-upm.jpeg" alt="logo-upm" className='logo-upm' />
+            <img src="gs://back-imagenes.appspot.com/imagenes/logo-utm.jpeg" alt="logo-utm" className='logo-utm'/>
+            <img src="gs://back-imagenes.appspot.com/imagenes/logo-policia-1.jpeg" alt="logo-policia" className='logo-policia-1'/>
             <button className='btn' onClick={handleLogout}>Logout</button>
             <h2>Sistema de Novedades</h2>
             <p>En este sitio usted podra realizar la carga de sus actividades,
