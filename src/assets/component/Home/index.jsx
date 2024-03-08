@@ -13,7 +13,7 @@ function Home({ user, setUser }) {
     const handleLogout = () => {
         setUser([])
     }
-
+    
     
     return (
         <div className='container-fluid  home'>

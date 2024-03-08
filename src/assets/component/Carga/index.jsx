@@ -34,14 +34,15 @@ const Carga = () => {
         navigate('/Lista')
     }
     return (
-        <><div>            
+        <><div>
             <form action="#" method="post" className="form-register" onSubmit={store}>
                 <h4 className="form-titulo">CARGA DE DATOS</h4>
                 <div className="contenedor ">
-                    <input type="date" id="fecha" name="fecha" placeholder="fecha" required value={fecha} onChange={(e) => setFecha(e.target.value)}/>
-                    <input type="text" id="lugar" name="lugar" placeholder="lugar" required value={lugar} onChange={(e) => setLugar(e.target.value)}/>
-                    <input type="tipo_novedad" id="tipo_novedad" name="tipo_novedad" placeholder="tipo de novedad" required value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)}/>
+                    <input type="date" id="fecha" name="fecha" placeholder="fecha" required value={fecha} onChange={(e) => setFecha(e.target.value)} />
+                    <input type="text" id="lugar" name="lugar" placeholder="lugar" required value={lugar} onChange={(e) => setLugar(e.target.value)} />
+                    <input type="tipo_novedad" id="tipo_novedad" name="tipo_novedad" placeholder="tipo de novedad" required value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)} />
                     <select required onChange={(e) => setComisaria(e.target.value)}>
+                        <option >Seleccione Comisaria</option>
                         <option value='12'>12</option>
                         <option value='13' >13</option>
                         <option value='15' >15</option>
@@ -49,6 +50,7 @@ const Carga = () => {
                         <option value='Mujer y Familia N° 2' >Mujer y Familia N° 2</option>
                     </select>
                     <select required onChange={(e) => setUnidad(e.target.value)}>
+                        <option >Seleccione Unidad</option>
                         <option value='U-1075'>U-1075</option>
                         <option value='U-1077'>U-1077</option>
                         <option value='U-1078'>U-1078</option>
@@ -60,8 +62,8 @@ const Carga = () => {
                         <option value='MT-955'>MT-955</option>
                         <option value='MT-962'>MT-962</option>
                     </select>
-                    <input type="text" id="personal_interviniente" name="personal_interviniente" placeholder="Personal Interviniente" required value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)}/>
-                    <input type="text" name="resumen" id="resumen" placeholder='Resumen de Novedad' value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4}/>
+                    <input type="text" id="personal_interviniente" name="personal_interviniente" placeholder="Personal Interviniente" required value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)} />
+                    <input type="text" name="resumen" id="resumen" placeholder='Resumen de Novedad' value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4} />
                     <input type="submit" value="Cargar" className=" btn btn-enviar" />
                 </div>
             </form>
