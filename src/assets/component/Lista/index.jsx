@@ -26,8 +26,7 @@ const Lista = () => {
     
     return (
         <>
-            <div className="container-fluid">
-                <h2>Novedades</h2>
+            <div>
                 <table className="table table-responsive">
                     <thead >
                         <tr className="titulos">

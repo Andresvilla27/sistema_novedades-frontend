@@ -34,44 +34,34 @@ const Carga = () => {
         navigate('/Lista')
     }
     return (
-        <><div>
-
-            {/* <form className="container-carga container-fluid"  onSubmit={store}>
-                <div className='lugar'>
-                    <label htmlFor="fecha">Seleccione la fecha</label>
-                    <input type="date" id="fecha" value={fecha} onChange={(e) => setFecha(e.target.value)} />
-                    <label htmlFor="lugar">Lugar de Novedad</label>
-                    <input type="text" id="lugar" value={lugar} onChange={(e) => setLugar(e.target.value)} />
-                    <label htmlFor="tipo_novedad">Tipo de Novedad</label>
-                    <input id="tipo_novedad" type='text' value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)} />
-                </div>
-                <div className='personal_unidad'>
-                    <label htmlFor="comisaria">Comisaria de Competencia</label>
-                    <input type='text' id='comisaria' value={comisaria} onChange={(e) => setComisaria(e.target.value)} />
-
-                    <label htmlFor="unidad">Numero de Unidad</label>
-                    <input id='unidad' type='text' value={unidad} onChange={(e) => setUnidad(e.target.value)} />
-
-                    <label htmlFor="personal">Personal Interviniente</label>
-                    <input type="text" id="personal" value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)} />
-                </div>
-                <div className='resumen'>
-                    <label htmlFor='resumen_novedad' >Resumen de Novedad</label>
-                    <textarea type="text" id="resumen_novedad" value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4} />
-                </div>
-                <button className='btn btn-save' type="submit" >Guardar</button>
-            </form> */}
-            
+        <><div>            
             <form action="#" method="post" className="form-register" onSubmit={store}>
                 <h4 className="form-titulo">CARGA DE DATOS</h4>
-                <div className="contenedor-inputs">
-                    <input type="date" id="fecha" name="fecha" placeholder="fecha" className="input-48" required value={fecha} onChange={(e) => setFecha(e.target.value)}/>
-                    <input type="text" id="lugar" name="lugar" placeholder="lugar" className="input-48" required value={lugar} onChange={(e) => setLugar(e.target.value)}/>
-                    <input type="tipo_novedad" id="tipo_novedad" name="tipo_novedad" placeholder="tipo de novedad" className="input-48" required value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)}/>
-                    <input type="text" id="comisaria" name="comisaria" placeholder="Comisaria de competencia" className="input-48" required value={comisaria} onChange={(e) => setComisaria(e.target.value)}/>
-                    <input type="text" id="numero_unidad" name="numero_unidad" placeholder="Numero de Unidad" className="input-48" required value={unidad} onChange={(e) => setUnidad(e.target.value)}/>
-                    <input type="text" id="personal_interviniente" name="personal_interviniente" placeholder="Personal Interviniente" className="input-48" required value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)}/>
-                    <input type="text" name="resumen" id="resumen" placeholder='Resumen de Novedad' className='input-100' value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4}/>
+                <div className="contenedor ">
+                    <input type="date" id="fecha" name="fecha" placeholder="fecha" required value={fecha} onChange={(e) => setFecha(e.target.value)}/>
+                    <input type="text" id="lugar" name="lugar" placeholder="lugar" required value={lugar} onChange={(e) => setLugar(e.target.value)}/>
+                    <input type="tipo_novedad" id="tipo_novedad" name="tipo_novedad" placeholder="tipo de novedad" required value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)}/>
+                    <select required onChange={(e) => setComisaria(e.target.value)}>
+                        <option value='12'>12</option>
+                        <option value='13' >13</option>
+                        <option value='15' >15</option>
+                        <option value='47' >47</option>
+                        <option value='Mujer y Familia N° 2' >Mujer y Familia N° 2</option>
+                    </select>
+                    <select required onChange={(e) => setUnidad(e.target.value)}>
+                        <option value='U-1075'>U-1075</option>
+                        <option value='U-1077'>U-1077</option>
+                        <option value='U-1078'>U-1078</option>
+                        <option value='U-1079'>U-1079</option>
+                        <option value='U-1111'>U-1111</option>
+                        <option value='MT-858'>MT-858</option>
+                        <option value='MT-939'>MT-939</option>
+                        <option value='MT-940'>MT-940</option>
+                        <option value='MT-955'>MT-955</option>
+                        <option value='MT-962'>MT-962</option>
+                    </select>
+                    <input type="text" id="personal_interviniente" name="personal_interviniente" placeholder="Personal Interviniente" required value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)}/>
+                    <input type="text" name="resumen" id="resumen" placeholder='Resumen de Novedad' value={resumen} onChange={(e) => setResumen(e.target.value)} rows={4}/>
                     <input type="submit" value="Cargar" className=" btn btn-enviar" />
                 </div>
             </form>

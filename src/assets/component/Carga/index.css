@@ -1,9 +1,21 @@
-.container-carga{
-    width: 100%;
+.contenedor{
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contenedor input, select{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #5f52a8;
+    margin-right: 1rem;
+    text-align: center;
+    width: fit-content;
 }
 
+h4{
+    padding: 20px;
+}
 .btn{
     border-color: cadetblue;
     width: auto;

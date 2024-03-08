@@ -5,6 +5,7 @@ import './index.css';
 
 
 
+
 function Login ({setUser}) {
   const [username, setUsername] = useState('');
   // eslint-disable-next-line no-unused-vars
@@ -12,8 +13,7 @@ function Login ({setUser}) {
   const [password, setPassword] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState('');
-
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -71,7 +71,7 @@ function Login ({setUser}) {
           <div className="panel left-panel">
             <div className="content">
             </div>
-            <img src="gs://back-imagenes.appspot.com/imagenes/logo-policia.png" className="image" alt="logo-policia" />
+            <img src='src/assets/img/logo-policia.png' className="image" alt="logo-policia" />
           </div>
           <div className="panel right-panel">
             <div className="content">
