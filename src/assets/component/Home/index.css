@@ -28,11 +28,10 @@
     list-style: none;
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    
 } 
 
 .btn{
-    border-color: cadetblue;
+    border: 1.5px solid #4f8aba;
     width: auto;
     height: 50px;
     color: #000;
@@ -63,7 +62,7 @@
     box-shadow: 0 0 20px 5px #4f8aba;
     color: #fff;
 }
-.btn-resumen:hover{
+.btn-logout:hover{
     background: transparent;
     box-shadow: 0 0 20px 5px #4fba71;
     color: #fff;

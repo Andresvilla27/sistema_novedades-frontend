@@ -30,7 +30,7 @@ const Lista = () => {
                 <table className="table table-responsive">
                     <thead >
                         <tr className="titulos">
-                            <th scope="col" >Numero</th>
+                            {/* <th scope="col" >Numero</th> */}
                             <th scope="col" >Fecha</th>
                             <th scope="col" >Lugar de Novedad</th>
                             <th scope="col" >Tipo de Novedad</th>
@@ -43,7 +43,7 @@ const Lista = () => {
                     <tbody>
                         {novedades.map((novedad) => (
                             <tr key={novedad.id} className="contenido">
-                                <td scope="row" > {novedad.id} </td>
+                                {/* <td> {novedad.id} </td> */}
                                 <td> {novedad.fecha} </td>
                                 <td> {novedad.lugar} </td>
                                 <td> {novedad.tipoNovedad} </td>

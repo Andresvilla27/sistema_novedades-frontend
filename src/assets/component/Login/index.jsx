@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import axios from 'axios'
-import { useState } from 'react';
+import axios from 'axios';
+import {  useState } from 'react';
 import './index.css';
-
+/* import {storage} from '../../../firebase'; */
 
 
 
@@ -13,11 +13,27 @@ function Login ({setUser}) {
   const [password, setPassword] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState('');
-  
 
   
+  /* const [imageUrl, setImageUrl] = useState('');
 
+  useEffect(() => {
+    const fetchImage = async () => {
+      const storageRef = storage.ref();
+      const imageRef = storageRef.child('img/logo-policia.png'); // Ruta de la imagen en Firebase Storage
+      try {
+        const url = await imageRef.getDownloadURL();
+        setImageUrl(url);
+      } catch (error) {
+        console.log('Error al obtener la URL de la imagen:', error);
+      }
+    };
 
+    fetchImage();
+  }, []);
+   */
+
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -75,7 +91,8 @@ function Login ({setUser}) {
           <div className="panel left-panel">
             <div className="content">
             </div>
-            <img src='src/assets/img/logo-policia.png' className="image" alt="logo-policia" />
+            <img src='https://firebasestorage.googleapis.com/v0/b/novedades-policia.appspot.com/o/img%2Flogo-policia.png?alt=media&token=7e057113-a691-457e-ab1a-35c930f84857' className='image' alt="logo-policia" />
+            {/* <img src='src/assets/img/logo-policia.png' className="image" alt="logo-policia" /> */}
           </div>
           <div className="panel right-panel">
             <div className="content">

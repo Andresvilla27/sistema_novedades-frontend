@@ -8,24 +8,27 @@ import { useState } from 'react';
 
 
 
+
 function App() {
-  const [user, setUser] = useState([]);
+
   
+  const [user, setUser] = useState([]);
+
   return (
     <>
       {
         !user.length > 0
           ? <Login setUser={setUser} />
-          : 
-      <Routes>
-        <Route path='/' element={<Home user={user} setUser={setUser}/>} >
-          <Route path='Lista' element={<Lista />} />
-          <Route path='Carga' element={<Carga />} />
-        </Route>
-      </Routes>
+          :
+          <Routes>
+            <Route path='/' element={<Home user={user} setUser={setUser} />} >
+              <Route path='Lista' element={<Lista />} />
+              <Route path='Carga' element={<Carga />} />
+            </Route>
+          </Routes>
       }
     </>
   )
 }
 
-export default App
+export default App;
