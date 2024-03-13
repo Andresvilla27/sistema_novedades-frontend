@@ -37,7 +37,7 @@ function Login ({setUser}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/login', {
+      const response = await axios.post('https://sistema-novedades-backend.vercel.app/login'/* 'http://localhost:8000/login' */, {
         username,
         password,
         user
@@ -98,7 +98,7 @@ function Login ({setUser}) {
             <div className="content">
               <h3>Already have an account?</h3>
               <p></p>
-              <button className="btn transparent" id="sign-in-btn"> Login </button>
+              <button className="btn-login transparent" id="sign-in-btn"> Login </button>
             </div>
           </div>
         </div>

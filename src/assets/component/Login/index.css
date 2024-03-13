@@ -118,8 +118,8 @@
     color: #4481eb; 
     border-color: #4481eb;
   } 
-  
-  /* .btn { 
+  /* 
+  .btn-login::before { 
     width: 150px; 
     background-color: #5995fd; 
     border: none; 
@@ -132,13 +132,12 @@
     margin: 10px 0; 
     cursor: pointer; 
     transition: 0.5s;
-  }  */
-  
-  .btn:hover { 
-    background-color: #4d84e2;
-    box-shadow: 0 0 20px 5px #4481eb;
-  }
-  
+  }   */
+  .btn-login:hover{
+    background: transparent;
+    box-shadow: 0 0 20px 5px #4f8aba;
+    color: #fff;
+}
   .panels-container { 
     position: absolute; 
     height: 100%; 

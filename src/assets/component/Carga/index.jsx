@@ -6,7 +6,8 @@ import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const URI = 'http://localhost:8000/novedades/'
+/* const URI = 'http://localhost:8000/novedades/' */
+const URI = 'https://sistema-novedades-backend.vercel.app/novedades'
 
 
 const Carga = () => {
