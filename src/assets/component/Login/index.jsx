@@ -37,7 +37,7 @@ function Login ({setUser}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(/* 'http://localhost:8000/login' */'https://sistema-novedades-backend.onrender.com/login', {
+      const response = await axios.post(/* 'http://localhost:8000/login' */'https://sistema-novedades-backend.onrender.com/', {
         username,
         password,
         user
