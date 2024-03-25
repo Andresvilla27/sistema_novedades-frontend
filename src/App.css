@@ -11,9 +11,13 @@
   background-blend-mode: soft-light;
   background-position: center top;
 }
-@media screen and (width>380px) {
+@media screen and (width < 400px) {
   #root{
     background-position: 50% 15%;
+    rotate: 90deg;
+    width: 650px;
+    
   }
 }
+
 

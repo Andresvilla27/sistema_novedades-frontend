@@ -118,23 +118,30 @@
     color: #4481eb; 
     border-color: #4481eb;
   } 
-  /* 
+  
+  .btn-login {
+   border: 1.5px solid #4f8aba;
+   width: auto;
+   color: #416c8a;
+   font-weight: 700;
+   border-radius: 20px;
+   margin: 25px;
+   overflow: hidden;
+   position: relative;
+} 
+  
   .btn-login::before { 
-    width: 150px; 
-    background-color: #5995fd; 
-    border: none; 
-    outline: none; 
-    height: 49px; 
-    border-radius: 49px; 
-    color: #fff; 
-    text-transform: uppercase; 
-    font-weight: 600; 
-    margin: 10px 0; 
-    cursor: pointer; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent,    #00fffc, transparent);
+    transform: translateX(-100%);
     transition: 0.5s;
-  }   */
+    position: absolute;
+  }   
   .btn-login:hover{
-    background: transparent;
+    /* background: transparent; */
     box-shadow: 0 0 20px 5px #4f8aba;
     color: #fff;
 }
@@ -204,18 +211,6 @@
     padding: 0.7rem 0;
   } 
   
-  .btn.transparent { 
-    color: #fff;
-    margin: 0; 
-    background: none; 
-    border: 2px solid #fff; 
-    width: 130px; 
-    height: 41px; 
-    font-weight: 600; 
-    font-size: 0.8rem;
-    
-  } 
-  
   .right-panel .image,.right-panel .content { 
     transform: translateX(800px);
   } 
@@ -262,17 +257,17 @@
     box-shadow: 0 0 20px 5px #fff;
   }
   @media (max-width: 870px) { 
-  
+
     .container { 
-      /* min-height: 800px;  */
+      min-height: 550px;
       height: 100vh; 
      } 
     
-     .signin-signup { 
-       width: 100%; 
-       top: 95%; 
-       transform: translate(-50%, -100%); 
-       transition: 1s 0.8s ease-in-out; 
+     .signin-signup {
+       width: 100%;
+       top: 95%;
+       transform: translate(-50%, -100%);
+       transition: 1s 0.5s ease-in-out;
      } 
      
      .signin-signup, .container.sign-up-mode .signin-signup { 
@@ -321,12 +316,12 @@
        padding: 0.5rem 0; 
      } 
      
-     .btn.transparent { 
+     .btn-login { 
        width: 110px; 
        height: 35px; 
-       font-size: 0.7rem; 
-     } 
-     
+       font-size: 0.7rem;
+      }  
+      
      .container:before { 
        width: 1500px; 
        height: 1500px; 
@@ -368,7 +363,8 @@
   
   @media (max-width: 570px) { 
     form { 
-     padding: 0 1.5rem; 
+     padding: 0 1.5rem;
+     margin-bottom: 6rem; 
     } 
     
     /* .image { 

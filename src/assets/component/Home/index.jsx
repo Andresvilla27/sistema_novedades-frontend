@@ -5,18 +5,13 @@ import Lista from '../Lista';
 
 
 
-
 // eslint-disable-next-line react/prop-types, no-unused-vars
 function Home({ user, setUser }) {
-    
 
-
-    
 
     const handleLogout = () => {
         setUser([])
     }
-    
     
     return (
         <div className='container-fluid  home'>
@@ -26,12 +21,11 @@ function Home({ user, setUser }) {
                     <img src="https://firebasestorage.googleapis.com/v0/b/novedades-policia.appspot.com/o/img%2Flogo-utm.jpeg?alt=media&token=e17d0349-8923-45b3-9f4f-f62eaa1f9c45" alt="logo-utm" className='logo-utm' />
                     <img src="https://firebasestorage.googleapis.com/v0/b/novedades-policia.appspot.com/o/img%2Flogo-policia-1.jpeg?alt=media&token=ea3822c9-6c5c-4cea-9940-2f0f0e34ad62" alt="logo-policia" className='logo-policia-1' />
                 </span>
-                    <button className='btn btn-logout' onClick={handleLogout}>Logout</button>
+                    <button className='btn btn-logout' onClick={handleLogout}>Cerrar Sesion</button>
             </div>
-            <h2>Sistema de Novedades</h2>
-            
+            <h2>Sistema de Novedades Diarias</h2>
             <p>En este sitio usted podra realizar la carga de sus actividades,
-                tambien podra visualizarlas en orden de registro.
+                tambien podrá visualizarlas en orden de registro.
             </p>
             <h5>A continuacion seleccione una opcion:</h5>
             <ul className="d-flex" >

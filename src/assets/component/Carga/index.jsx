@@ -5,8 +5,10 @@ import './index.css'
 import axios from 'axios';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+//desarrollo local
 /* const URI = 'http://localhost:8000/novedades/' */
+
+//produccion
 const URI = 'https://sistema-novedades-backend.onrender.com/novedades/'
 
 

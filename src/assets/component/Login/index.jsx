@@ -2,7 +2,6 @@
 import axios from 'axios';
 import {  useState } from 'react';
 import './index.css';
-/* import {storage} from '../../../firebase'; */
 
 
 
@@ -15,29 +14,10 @@ function Login ({setUser}) {
   const [error, setError] = useState('');
 
   
-  /* const [imageUrl, setImageUrl] = useState('');
-
-  useEffect(() => {
-    const fetchImage = async () => {
-      const storageRef = storage.ref();
-      const imageRef = storageRef.child('img/logo-policia.png'); // Ruta de la imagen en Firebase Storage
-      try {
-        const url = await imageRef.getDownloadURL();
-        setImageUrl(url);
-      } catch (error) {
-        console.log('Error al obtener la URL de la imagen:', error);
-      }
-    };
-
-    fetchImage();
-  }, []);
-   */
-
-  
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(/* 'http://localhost:8000/login' */'https://sistema-novedades-backend.onrender.com/', {
+      const response = await axios.post(/* 'http://localhost:8000/login' */'https://sistema-novedades-backend.onrender.com/login', {
         username,
         password,
         user
@@ -51,6 +31,7 @@ function Login ({setUser}) {
       console.log(response.data.user);
     } catch (error) {
       setError('Invalid username or password');
+      alert('Usuario o Password incorrectas')
     }
   };
   
@@ -82,7 +63,7 @@ function Login ({setUser}) {
                 onChange={(e)=>setPassword(e.target.value)} 
                 name='password' />
               </div>
-              <input type="submit" value="Login" className="btn solid"/>
+              <input type="submit" value="Inicio Sesion" className="btn-login"/>
             </form>
           </div>
         </div>
@@ -92,14 +73,6 @@ function Login ({setUser}) {
             <div className="content">
             </div>
             <img src='https://firebasestorage.googleapis.com/v0/b/novedades-policia.appspot.com/o/img%2Flogo-policia.png?alt=media&token=7e057113-a691-457e-ab1a-35c930f84857' className='image' alt="logo-policia" />
-            {/* <img src='src/assets/img/logo-policia.png' className="image" alt="logo-policia" /> */}
-          </div>
-          <div className="panel right-panel">
-            <div className="content">
-              <h3>Already have an account?</h3>
-              <p></p>
-              <button className="btn-login transparent" id="sign-in-btn"> Login </button>
-            </div>
           </div>
         </div>
       </div>

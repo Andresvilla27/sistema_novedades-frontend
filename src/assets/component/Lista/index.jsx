@@ -1,10 +1,11 @@
 
-
 import axios from "axios";
 import { useEffect, useState } from "react";
 import '../Lista/index.css'
 
+//local
 /* const URI = 'http://localhost:8000/novedades/' */ 
+//produccion
 const URI = 'https://sistema-novedades-backend.onrender.com/novedades/'
 
 const Lista = () => {
@@ -30,7 +31,6 @@ const Lista = () => {
                 <table className="table table-responsive">
                     <thead >
                         <tr className="titulos">
-                            {/* <th scope="col" >Numero</th> */}
                             <th scope="col" >Fecha</th>
                             <th scope="col" >Lugar de Novedad</th>
                             <th scope="col" >Tipo de Novedad</th>
@@ -43,7 +43,6 @@ const Lista = () => {
                     <tbody>
                         {novedades.map((novedad) => (
                             <tr key={novedad.id} className="contenido">
-                                {/* <td> {novedad.id} </td> */}
                                 <td> {novedad.fecha} </td>
                                 <td> {novedad.lugar} </td>
                                 <td> {novedad.tipoNovedad} </td>

@@ -33,7 +33,6 @@
 .btn{
     border: 1.5px solid #4f8aba;
     width: auto;
-    height: 50px;
     color: #000;
     font-weight: 700;
     border-radius: 20px;
@@ -46,8 +45,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(120deg, transparent,
-    #00fffc, transparent);
+    background: linear-gradient(120deg, transparent,    #00fffc, transparent);
     transform: translateX(-100%);
     transition: 0.5s;
     position: absolute;
@@ -55,16 +53,24 @@
 .btn-carga:hover{
     background: transparent;
     box-shadow: 0 0 20px 5px #4fbab8;
-    color: #fff;
+    color: #4fbab8;
 }
 .btn-lista:hover{
     background: transparent;
     box-shadow: 0 0 20px 5px #4f8aba;
-    color: #fff;
+    color: #4f8aba;
 }
 .btn-logout:hover{
     background: transparent;
-    box-shadow: 0 0 20px 5px #4fba71;
-    color: #fff;
+    box-shadow: 0 0 20px 5px #8c8c8ce6;
+    color: #9e0101;
 }
 
+@media screen and (max-width: 570px) {
+    .nav{
+        width: auto;
+        margin: 0;
+        padding: 2px;
+    }
+    
+}
