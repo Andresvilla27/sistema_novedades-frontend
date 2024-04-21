@@ -1,18 +1,34 @@
-import firebase from 'firebase/app';
-import 'firebase/storage';
 
+import { initializeApp } from 'firebase/app';
+import { getDownloadURL, getStorage, ref, uploadBytes } from 'firebase/storage';
+import 'firebase/firestore';
+import { v4 } from 'uuid';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB8ONEXS3MyLhdvhOX_vKEUKQeTJBfyk4Q",
-    authDomain: "novedades-policia.firebaseapp.com",
-    projectId: "novedades-policia",
-    storageBucket: "novedades-policia.appspot.com",
-    messagingSenderId: "30802840685",
-    appId: "1:30802840685:web:b48665f44f2be34235c364"
-  };
+  apiKey: "AIzaSyANtEspivOFRGNptiCAh4fAm7Fr63Hpdwc",
+  authDomain: "novedades-prevencion.firebaseapp.com",
+  projectId: "novedades-prevencion",
+  storageBucket: "novedades-prevencion.appspot.com",
+  messagingSenderId: "275564188826",
+  appId: "1:275564188826:web:af68145b033e61ae9f3b23"
+};
 
-  firebase.initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig)
 
-  const storage = firebase.storage();
+export const storage = getStorage(app)
 
-export {storage, firebase as default};
+export async function upLoadFile(file) {
+  const storageRef = ref(storage, `identificaciones/${v4()}`)
+  await uploadBytes(storageRef, file)
+  const url = await getDownloadURL(storageRef)
+  return url
+}
+
+export async function upLoadFileUser(file) {
+  const storageRef = ref(storage, `user/${v4()}`)
+  await uploadBytes(storageRef, file)
+  const url = await getDownloadURL(storageRef)
+  return url
+}
+
+

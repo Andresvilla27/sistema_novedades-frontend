@@ -8,28 +8,25 @@ import './index.css';
 function Login ({setUser}) {
   const [username, setUsername] = useState('');
   // eslint-disable-next-line no-unused-vars
-  const [user, SetUSer] = useState('')
   const [password, setPassword] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [error, setError] = useState('');
 
-  
+//validacion de ingreso comparando con base de datos
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(/* 'http://localhost:8000/login' */'https://sistema-novedades-backend.onrender.com/login', {
-        username,
-        password,
-        user
-      });
-      if(username === '' || password === ''){
-        setError(true)
-        return
+      if (username === '' || password === ''){
+        setError('Por favor, complete ambos campos')
+        return;
       }
-      setError(false)
-      setUser([user])
-      console.log(response.data.user);
-    } catch (error) {
+      const response = await axios.post(/*'http://localhost:8000/login/'*/ 'https://sistema-novedades-backend.onrender.com/login', {
+        username,
+        password
+      });
+      setUser(response.data.user) 
+      setError('')
+      } catch (error) {
       setError('Invalid username or password');
       alert('Usuario o Password incorrectas')
     }
