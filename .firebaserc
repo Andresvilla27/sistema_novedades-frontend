@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "novedades-policia"
-  }
+    "default": "novedades-prevencion",
+    "novedades_identificaciones": "novedades-prevencion"
+  },
+  "targets": {},
+  "etags": {}
 }
