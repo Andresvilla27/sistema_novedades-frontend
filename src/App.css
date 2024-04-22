@@ -1,23 +1,14 @@
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
   color: #1d1c35;
-  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
   background: #dadee6;
-  background-image: url("../src/assets/img/logo-policia.png");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-policia.png?alt=media&token=e6707323-e4e0-4e90-b97a-f521f02a3910");
   background-repeat: no-repeat;
   background-size: contain;
   background-blend-mode: soft-light;
   background-position: center top;
 }
-@media screen and (width < 400px) {
-  #root{
-    background-position: 50% 15%;
-    rotate: 90deg;
-    width: 650px;
-    
-  }
-}
-
-
