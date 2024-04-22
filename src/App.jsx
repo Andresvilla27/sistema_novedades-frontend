@@ -1,13 +1,13 @@
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
-import Home from './assets/pageComponent/novedadesComponent/Home'
+import Home from './assets/Componentes/Componentes_Novedades/Home'
 import Login from './assets/Login'
-import Carga from './assets/pageComponent/novedadesComponent/Carga'
-import Lista from './assets/pageComponent/novedadesComponent/Lista'
-import CargaIdent from './assets/pageComponent/identificacionComponent/CargaIdent/CargaIdent';
-import ListaIdent from './assets/pageComponent/identificacionComponent/ListaIdent';
-import CargaUsuario from './assets/pageComponent/usuariosComponent/NuevoUsuario';
-import ListaUsuarios from './assets/pageComponent/usuariosComponent/ListaUsuario';
+import Carga from './assets/Componentes/Componentes_Novedades/Carga'
+import Lista from './assets/Componentes/Componentes_Novedades/Lista'
+import CargaIdent from './assets/Componentes/Componentes_Identificaciones/CargaIdent';
+import ListaIdent from './assets/Componentes/Componentes_Identificaciones/ListaIdent';
+import CargaUsuario from './assets/Componentes/Componentes_Usuarios/NuevoUsuario';
+import ListaUsuarios from './assets/Componentes/Componentes_Usuarios/ListaUsuario';
 import { useState } from 'react';
 
 
