@@ -11,7 +11,7 @@ import { upLoadFileUser } from '../../../../firebase';
 
 
 //produccion
-const URI = 'https://sistema-novedades-backend.onrender.com/login/'
+const URI = 'https://sistema-novedades-backend.onrender.com/usuarios/'
 
 
 

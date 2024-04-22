@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 /* const URI = "http://localhost:8000/usuarios/"; */
 
-const URI = 'https://sistema-novedades-backend.onrender.com/login/'
+const URI = 'https://sistema-novedades-backend.onrender.com/usuarios/'
 
 // eslint-disable-next-line react/prop-types
 const ListaUsuarios = ({ user }) => {
