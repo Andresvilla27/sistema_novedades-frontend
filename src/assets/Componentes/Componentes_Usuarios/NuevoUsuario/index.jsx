@@ -7,11 +7,11 @@ import { upLoadFileUser } from '../../../../firebase';
 
 
 //desarrollo local
-const URI = 'http://localhost:8000/usuarios/'
+/* const URI = 'http://localhost:8000/usuarios/' */
 
 
 //produccion
-/* const URI = 'https://sistema-novedades-backend.onrender.com/login/' */
+const URI = 'https://sistema-novedades-backend.onrender.com/login/'
 
 
 

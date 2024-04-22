@@ -8,15 +8,13 @@ import { useNavigate } from 'react-router-dom';
 
 
 //desarrollo local
-const URI = 'http://localhost:8000/novedades/'
+/* const URI = 'http://localhost:8000/novedades/' */
 
-<<<<<<<< HEAD:src/assets/pageComponent/novedadesComponent/Carga/index.jsx
-//produccion
-/* const URI = 'https://sistema-novedades-backend.onrender.com/novedades/' */
-========
+
+
 //desarrollo en produccion
 const URI = 'https://sistema-novedades-backend.onrender.com/novedades/'
->>>>>>>> 6a53a840ed09c48e556526de4ffed6f290d429ec:src/assets/Componentes/Componentes_Novedades/Carga/index.jsx
+
 
 
 

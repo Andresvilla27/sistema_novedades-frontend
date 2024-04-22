@@ -3,8 +3,9 @@ import axios from "axios";
 import './index.css'
 import { useState, useEffect } from "react";
 
-const URI = "http://localhost:8000/usuarios/";
+/* const URI = "http://localhost:8000/usuarios/"; */
 
+const URI = 'https://sistema-novedades-backend.onrender.com/login/'
 
 // eslint-disable-next-line react/prop-types
 const ListaUsuarios = ({ user }) => {
