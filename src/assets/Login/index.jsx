@@ -21,12 +21,12 @@ function Login({  setUser }) {
         setError('Por favor, complete ambos campos')
         return;
       }
-      const response = await axios.post(/*'http://localhost:8000/login/'*/ 'https://sistema-novedades-backend.onrender.com/login', {
+      const response = await axios.post(/* 'http://localhost:8000/login/' */ 'https://sistema-novedades-backend.onrender.com/login' , {
         username,
         password
       });
       setUser(response.data.user) 
-      console.log(response.data.username);
+      console.log(response.data.user);
       setError('')
       } catch (error) {
       setError('Invalid username or password');

@@ -4,7 +4,7 @@ import "../Lista/index.css";
 import { useState, useEffect } from "react";
 
 //desarrollo local
-/* const URI = "http://localhost:8000/novedades/"; */
+/* const URI = "http://localhost:8000/novedades/" */ 
 
 //desarrollo en produccion
 const URI = 'https://sistema-novedades-backend.onrender.com/novedades/'

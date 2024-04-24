@@ -7,7 +7,7 @@ import './index.css'
 
 
 //desarrollo local
-/* const URI = 'http://localhost:8000/identificaciones/' */
+/* const URI = 'http://localhost:8000/identificaciones/'  */
 
 //produccion
 const URI = 'https://sistema-novedades-backend.onrender.com/identificaciones/'

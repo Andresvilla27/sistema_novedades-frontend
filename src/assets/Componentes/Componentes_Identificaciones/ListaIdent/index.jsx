@@ -5,10 +5,10 @@ import './index.css'
 
 
 //desarrollo local
-/* const URI = 'http://localhost:8000/identificaciones/' */
+/* const URI = 'http://localhost:8000/identificaciones/'  */
 
 //desarrollo en produccion
-const URI = 'https://sistema-novedades-backend.onrender.com/identificaciones/'
+const URI = 'https://sistema-novedades-backend.onrender.com/identificaciones/' 
 
 // eslint-disable-next-line react/prop-types
 const ListaIdent = ({ user }) => {

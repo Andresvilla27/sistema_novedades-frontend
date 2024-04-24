@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { upLoadFileUser } from '../../../../firebase';
+import {upLoadFileUser} from '../../../../firebase'
 
 
 
 
 //desarrollo local
-/* const URI = 'http://localhost:8000/usuarios/' */
+/* const URI = 'http://localhost:8000/usuarios/'  */
 
 
 //produccion
