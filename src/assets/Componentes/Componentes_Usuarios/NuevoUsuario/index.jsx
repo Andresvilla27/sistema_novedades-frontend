@@ -28,14 +28,6 @@ const CargaUsuario = () => {
   const navigate = useNavigate()
 
 
-  /* const [admin, setAdmin] = useState('')
-
-  if(tipoUsuario === 1){
-    setAdmin('admin')
-  }if(tipoUsuario === 2){
-    setAdmin('user')
-  } */
- 
   //procedimiento guardar el usuario
 
    const store = async (e) => {
