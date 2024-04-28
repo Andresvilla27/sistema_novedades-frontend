@@ -32,7 +32,6 @@ const CargaUsuario = () => {
 
    const store = async (e) => {
       e.preventDefault();
-      try {
         const imageUrl = await upLoadFileUser(file)
         await axios.post(URI, {
           nombres: nombres,
@@ -45,9 +44,7 @@ const CargaUsuario = () => {
         })
 
         navigate('/ListaUsuario')
-      } catch (error) {
-        console.error("Error al crear el usuario", error);
-      }
+      
 
     };
 
