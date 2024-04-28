@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 /* const URI = "http://localhost:8000/usuarios";  */
 
-const URI = 'https://sistema-novedades-backend.onrender.com/usuarios/'
+const URI2 = 'https://sistema-novedades-backend.onrender.com/usuarios/'
 
 // eslint-disable-next-line react/prop-types
 const ListaUsuarios = ({ user }) => {
@@ -20,7 +20,7 @@ const ListaUsuarios = ({ user }) => {
   
   const getUsuarios = async () => {
     try {
-      const res = await axios.get(URI);
+      const res = await axios.get(URI2);
       setUsuarios(res.data);
     } catch (error) {
       console.error("Error al obtener las novedades:", error);
@@ -30,7 +30,7 @@ const ListaUsuarios = ({ user }) => {
 
   const deleteUsuario = async (id) => {
     try {
-      await axios.delete(`${URI}${id}`);
+      await axios.delete(`${URI2}${id}`);
       getUsuarios();
     } catch (error) {
       console.error("Error al eliminar la novedad:", error);

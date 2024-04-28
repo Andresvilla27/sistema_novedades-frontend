@@ -8,7 +8,7 @@ import './index.css'
 /* const URI = 'http://localhost:8000/identificaciones/'  */
 
 //desarrollo en produccion
-const URI = 'https://sistema-novedades-backend.onrender.com/identificaciones/' 
+const URI1 = 'https://sistema-novedades-backend.onrender.com/identificaciones/' 
 
 // eslint-disable-next-line react/prop-types
 const ListaIdent = ({ user }) => {
@@ -22,7 +22,7 @@ const ListaIdent = ({ user }) => {
 
   const getIdentificaciones = async () => {
     try {
-      const res = await axios.get(URI)
+      const res = await axios.get(URI1)
       setIdentificaciones(res.data)
     } catch (error) {
       console.error("Error al obtener identificaciones", error);
@@ -31,7 +31,7 @@ const ListaIdent = ({ user }) => {
 
   const deleteIdentificacion = async (id) => {
     try {
-      await axios.delete(`${URI}${id}`)
+      await axios.delete(`${URI1}${id}`)
       getIdentificaciones()
     } catch (error) {
       console.error("Error al eliminar identificacion", error);

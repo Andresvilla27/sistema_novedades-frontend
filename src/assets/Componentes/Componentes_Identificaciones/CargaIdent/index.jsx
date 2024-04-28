@@ -10,7 +10,7 @@ import './index.css'
 /* const URI = 'http://localhost:8000/identificaciones/'  */
 
 //produccion
-const URI = 'https://sistema-novedades-backend.onrender.com/identificaciones/'
+const URI1 = 'https://sistema-novedades-backend.onrender.com/identificaciones/'
 
 
 const CargaIdent = () => {
@@ -32,10 +32,9 @@ const CargaIdent = () => {
   //procedimiento guardar la identificacion
   const store = async (e) => {
     e.preventDefault();
-    try {
 
       const imageUrl = await upLoadFile(file)
-      await axios.post(URI, {
+      await axios.post(URI1, {
         nombre: nombre,
         apellido: apellido,
         dni: dni,
@@ -48,9 +47,7 @@ const CargaIdent = () => {
         img: imageUrl
       });
       navigate('/ListaIdent')
-    } catch (error) {
-      console.error("Error al cargar identificacion", error);
-    }
+    
   };
 
   return (

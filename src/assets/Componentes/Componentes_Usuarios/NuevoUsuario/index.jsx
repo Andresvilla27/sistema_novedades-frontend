@@ -11,7 +11,7 @@ import {upLoadFileUser} from '../../../../firebase'
 
 
 //produccion
-const URI = 'https://sistema-novedades-backend.onrender.com/usuarios/'
+const URI2 = 'https://sistema-novedades-backend.onrender.com/usuarios/'
 
 
 
@@ -33,7 +33,7 @@ const CargaUsuario = () => {
    const store = async (e) => {
       e.preventDefault();
         const imageUrl = await upLoadFileUser(file)
-        await axios.post(URI, {
+        await axios.post(URI2, {
           nombres: nombres,
           apellido: apellido,
           legajo: legajo,
@@ -42,10 +42,7 @@ const CargaUsuario = () => {
           password: password,
           user: tipoUsuario,
         })
-
         navigate('/ListaUsuario')
-      
-
     };
 
     return (
