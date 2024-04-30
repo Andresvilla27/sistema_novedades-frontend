@@ -44,13 +44,13 @@ const CargaUsuario = () => {
             username: usuario,
             password: password,
             user: tipoUsuario,
-          })
+          });
           if(responseUsuarios.status === 200 ){
             await axios.post(`${URI2}/login`,{
               username: usuario,
               password: password,
               user: tipoUsuario
-            })
+            });
           }
           navigate('/ListaUsuario')
         } catch(error){
