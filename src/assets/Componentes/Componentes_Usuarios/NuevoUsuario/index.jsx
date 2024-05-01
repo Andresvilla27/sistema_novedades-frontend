@@ -11,9 +11,7 @@ import {upLoadFileUser} from '../../../../firebase'
 
 
 //produccion
-const URI2 = 'https://sistema-novedades-backend.onrender.com/'
-
-
+const URI2 = 'https://sistema-novedades-backend.onrender.com/usuarios/'
 
 
 const CargaUsuario = () => {
@@ -36,7 +34,7 @@ const CargaUsuario = () => {
 
         try{
           //guardar datos en tabla usuarios
-          const responseUsuarios = await axios.post(`${URI2}/usuarios`, {
+            await axios.post(URI2, {
             nombres: nombres,
             apellido: apellido,
             legajo: legajo,
@@ -45,16 +43,9 @@ const CargaUsuario = () => {
             password: password,
             user: tipoUsuario,
           });
-          if(responseUsuarios.status === 200 ){
-            await axios.post(`${URI2}/login`,{
-              username: usuario,
-              password: password,
-              user: tipoUsuario
-            });
-          }
           navigate('/ListaUsuario')
         } catch(error){
-          console.error(error)
+          console.error('No se creo el usuario',error)
         }
     };
 
