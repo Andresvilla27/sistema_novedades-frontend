@@ -31,6 +31,7 @@ const Carga = () => {
     //procedimiento para guardar la novedad
     const store = async (e) => {
         e.preventDefault()
+        try {
         await axios.post(URI, {
             fecha: fecha,
             lugar: lugar,
@@ -41,6 +42,9 @@ const Carga = () => {
             resumen: resumen
         })
         navigate('/Lista')
+    } catch (error){
+        console.error(error);
+    }
     }
     return (
         <><div>

@@ -31,7 +31,6 @@ const CargaUsuario = () => {
    const store = async (e) => {
       e.preventDefault();
         const imageUrl = await upLoadFileUser(file);
-
         try{
           //guardar datos en tabla usuarios
             await axios.post(URI2, {
@@ -41,12 +40,14 @@ const CargaUsuario = () => {
             file: imageUrl,
             username: usuario,
             password: password,
-            user: tipoUsuario,
+            user: tipoUsuario
           });
-          navigate('/ListaUsuario')
-        } catch(error){
-          console.error('No se creo el usuario',error)
+        }catch (error){
+          console.error(error);
         }
+          navigate('/ListaUsuario')
+        
+        
     };
 
     return (
@@ -56,12 +57,12 @@ const CargaUsuario = () => {
 
           <form onSubmit={store} >
             <h4 className="form-titulo">Nuevo Usuario</h4>
-            <input type="text" name="nombres" placeholder='Ingrese el Nombre' value={nombres} onChange={(e) => setNombres(e.target.value)} />
-            <input type="text" name="apellido" placeholder='Ingrese el Apellido' value={apellido} onChange={(e) => setApellido(e.target.value)} />
-            <input type="number" name="legajo" placeholder='Ingrese el Legajo' value={legajo} onChange={(e) => setLegajo(e.target.value)} />
-            <input type="text" name="usuario" placeholder='Ingrese el Usuario' value={usuario} onChange={(e) => setUsuario(e.target.value)} />
-            <input type="text" name="password" placeholder='Ingrese el Password' value={password} onChange={(e) => setPassword(e.target.value)} />
-            <select name="tipoUsuario" onChange={(e) => setTipoUsuario(e.target.value)}>
+            <input type="text" name="nombres" placeholder='Ingrese el Nombre' value={nombres} onChange={(e) => setNombres(e.target.value)} required/>
+            <input type="text" name="apellido" placeholder='Ingrese el Apellido' value={apellido} onChange={(e) => setApellido(e.target.value)} required/>
+            <input type="number" name="legajo" placeholder='Ingrese el Legajo' value={legajo} onChange={(e) => setLegajo(e.target.value)} required/>
+            <input type="text" name="usuario" placeholder='Ingrese el Usuario' value={usuario} onChange={(e) => setUsuario(e.target.value)} required/>
+            <input type="text" name="password" placeholder='Ingrese el Password' value={password} onChange={(e) => setPassword(e.target.value)} required/>
+            <select name="tipoUsuario" onChange={(e) => setTipoUsuario(e.target.value)} required>
               <option value="">Seleccione el tipo de usuario</option>
               <option  value={1} >Administrador</option>
               <option  value={2} >Usuario</option>

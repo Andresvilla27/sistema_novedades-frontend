@@ -3,8 +3,9 @@ import axios from "axios";
 import "../Lista/index.css";
 import { useState, useEffect } from "react";
 
+
 //desarrollo local
-/* const URI = "http://localhost:8000/novedades/" */ 
+/* const URI = "http://localhost:8000/novedades/" */
 
 //desarrollo en produccion
 const URI = 'https://sistema-novedades-backend.onrender.com/novedades/'
@@ -13,6 +14,7 @@ const URI = 'https://sistema-novedades-backend.onrender.com/novedades/'
 const Lista = ({ user }) => {
 
   const [novedades, setNovedades] = useState([]);
+  
 
   useEffect(() => {
     getNovedades();
@@ -35,6 +37,10 @@ const Lista = ({ user }) => {
     }
   };
 
+  const showAlert = (resumen) => {
+    alert(resumen)
+  }
+
   return (
     <>
       <div className="contenedor">
@@ -56,23 +62,25 @@ const Lista = ({ user }) => {
           </thead>
           <tbody>
             {novedades.map((novedad) => (
-              <tr key={novedad.id} className="contenido">
+              <tr key={novedad.id} className="contenido" >
                 <td>{novedad.fecha}</td>
                 <td>{novedad.lugar}</td>
                 <td>{novedad.tipoNovedad}</td>
                 <td>{novedad.comisaria}</td>
                 <td>{novedad.unidad}</td>
                 <td>{novedad.personalInterv}</td>
-                <td>{novedad.resumen}</td>
-                {user === 1 &&
+                <td className="resumen" onClick={() => showAlert(novedad.resumen)}>{novedad.resumen}</td>
+                {user === 1 && (
                   <td>
-                    <button
-                      onClick={() => deleteNovedad(novedad.id)}
-                      className="btn btn-danger"
-                    >
-                      <i className="fas fa-trash-alt"></i>
-                    </button>
+                      <button
+                        onClick={() => deleteNovedad(novedad.id)}
+                        className="btn btn-danger"
+                      >
+                        <i className="fas fa-trash-alt"></i>
+                      </button>
+                    
                   </td>
+                )
                 }
               </tr>
             ))}

@@ -4,11 +4,14 @@ import axios from "axios"
 import './index.css'
 
 
+// Create a reference to the file to delete
+
+
 //desarrollo local
 /* const URI = 'http://localhost:8000/identificaciones/'  */
 
 //desarrollo en produccion
-const URI1 = 'https://sistema-novedades-backend.onrender.com/identificaciones/' 
+const URI1 = 'https://sistema-novedades-backend.onrender.com/identificaciones/'
 
 // eslint-disable-next-line react/prop-types
 const ListaIdent = ({ user }) => {
@@ -32,6 +35,7 @@ const ListaIdent = ({ user }) => {
   const deleteIdentificacion = async (id) => {
     try {
       await axios.delete(`${URI1}${id}`)
+
       getIdentificaciones()
     } catch (error) {
       console.error("Error al eliminar identificacion", error);
@@ -41,7 +45,7 @@ const ListaIdent = ({ user }) => {
   return (
     <>
       <h2>Lista Identificaciones</h2>
-      
+
       <div className="cards">
         {identificaciones.map((identificacion) => (
           <div key={identificacion.id} id="card">

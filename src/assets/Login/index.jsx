@@ -22,7 +22,7 @@ function Login({  setUser }) {
         setError('Por favor, complete ambos campos')
         return;
       }
-      const response = await axios.post(/* 'http://localhost:8000/login/' */ 'https://sistema-novedades-backend.onrender.com/logins' , {
+      const response = await axios.post(/* 'http://localhost:8000/logins/' */ 'https://sistema-novedades-backend.onrender.com/logins' , {
         username,
         password
       });
@@ -34,6 +34,7 @@ function Login({  setUser }) {
       alert('Usuario o Password incorrectas')
     }
   };
+    
     
   return (
     <>
