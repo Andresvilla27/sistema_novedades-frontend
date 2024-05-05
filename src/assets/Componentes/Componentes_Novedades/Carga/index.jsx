@@ -26,11 +26,13 @@ const Carga = () => {
     const [unidad, setUnidad] = useState('')
     const [personalInterv, setPersonalInterv] = useState('')
     const [resumen, setResumen] = useState('')
+    const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate()
 
     //procedimiento para guardar la novedad
     const store = async (e) => {
         e.preventDefault()
+        setIsLoading(true);
         try {
         await axios.post(URI, {
             fecha: fecha,
@@ -41,13 +43,29 @@ const Carga = () => {
             personalInterv: personalInterv,
             resumen: resumen
         })
+        setIsLoading(false);
         navigate('/Lista')
     } catch (error){
         console.error(error);
+        setIsLoading(false);
     }
     }
     return (
         <><div>
+            {isLoading && (
+        <div className="modal" id="loadingModal" tabIndex="-1" aria-labelledby="loadingModalLabel" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-centered">
+            <div className="modal-content">
+              <div className="modal-body text-center">
+                <div className="spinner-border" role="status">
+                  <span className="visually-hidden">Cargando...</span>
+                </div>
+                <p className="mt-2">Cargando...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
             <form method="post" className="form-register" onSubmit={store}>
                 <h4 className="form-titulo">Carga de Novedad</h4>
                 <div className="contenedor ">

@@ -53,4 +53,8 @@ th {
   cursor: pointer;
 }
 
+.resumen:hover{
+  color: blue;
+}
+
 

@@ -45,6 +45,7 @@ const ListaIdent = ({ user }) => {
   return (
     <>
       <h2>Lista Identificaciones</h2>
+<div className="container-cards">
 
       <div className="cards">
         {identificaciones.map((identificacion) => (
@@ -68,6 +69,7 @@ const ListaIdent = ({ user }) => {
           </div>
         ))}
       </div>
+</div>
 
     </>
   )

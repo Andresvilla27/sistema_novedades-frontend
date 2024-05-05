@@ -1,12 +1,36 @@
-/* index.css */
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .cards {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1024px) {
+  #card {
+    width: calc(50% - 20px); 
   }
+}
+
+@media screen and (max-width: 768px) {
+  #card {
+    width: calc(100% - 20px);
+  }
+}
+
   
   .headerCard {
     padding: 10px;
