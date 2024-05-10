@@ -1,10 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-
 import './index.css'
-
-
-// Create a reference to the file to delete
 
 
 //desarrollo local
