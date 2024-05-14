@@ -86,12 +86,24 @@ const Carga = () => {
                         <option value='U-1077'>U-1077</option>
                         <option value='U-1078'>U-1078</option>
                         <option value='U-1079'>U-1079</option>
+                        <option value="U-1109">U-1109</option>
                         <option value='U-1111'>U-1111</option>
-                        <option value='MT-858'>MT-858</option>
-                        <option value='MT-939'>MT-939</option>
+                        <option value="MT-158">MT-158</option>
+                        <option value="MT.598">MT-598</option>
+                        <option value="MT-624">MT-624</option>
+                        <option value="MT-649">MT-649</option>
+                        <option value="MT-653">MT-653</option>
+                        <option value='MT-858'>MT-843</option>
+                        <option value='MT-939'>MT-844</option>
+                        <option value="MT-939">MT-939</option>
+                        <option value="MT-857">MT-857</option>
+                        <option value="MT-858">MT-858</option>
                         <option value='MT-940'>MT-940</option>
+                        <option value="MT-954">MT-954</option>
                         <option value='MT-955'>MT-955</option>
                         <option value='MT-962'>MT-962</option>
+                        <option value="UB-99">UB-99</option>
+                        <option value="UB-100">UB-100</option>
                     </select>
                     <input type="text" id="personal_interviniente" name="personal_interviniente" placeholder="Personal Interviniente" required value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)} />
                     <textarea type="text" name="resumen" id="resumen" placeholder='Resumen de Novedad' value={resumen} onChange={(e) => setResumen(e.target.value)} required/>
