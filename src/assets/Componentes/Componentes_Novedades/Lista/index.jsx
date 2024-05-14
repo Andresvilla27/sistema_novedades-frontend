@@ -4,6 +4,7 @@ import "../Lista/index.css";
 import { useState, useEffect } from "react";
 
 
+
 //desarrollo local
 /* const URI = "http://localhost:8000/novedades/" */
 
@@ -14,7 +15,7 @@ const URI = 'https://sistema-novedades-backend.onrender.com/novedades/'
 const Lista = ({ user }) => {
 
   const [novedades, setNovedades] = useState([]);
-  
+
 
   useEffect(() => {
     getNovedades();
@@ -40,6 +41,7 @@ const Lista = ({ user }) => {
   const showAlert = (resumen) => {
     alert(resumen)
   }
+
 
   return (
     <>
@@ -72,16 +74,15 @@ const Lista = ({ user }) => {
                 <td className="resumen" onClick={() => showAlert(novedad.resumen)}>{novedad.resumen}</td>
                 {user === 1 && (
                   <td>
-                      <button
-                        onClick={() => deleteNovedad(novedad.id)}
-                        className="btn btn-danger"
-                      >
-                        <i className="fas fa-trash-alt"></i>
-                      </button>
-                    
+                    <button
+                      onClick={() => deleteNovedad(novedad.id)}
+                      className="btn btn-danger"
+                    >
+                      <i className="fas fa-trash-alt"></i>
+                    </button>
+
                   </td>
-                )
-                }
+                )}
               </tr>
             ))}
           </tbody>

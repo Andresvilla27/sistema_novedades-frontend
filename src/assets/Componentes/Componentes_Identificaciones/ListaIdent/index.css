@@ -18,6 +18,11 @@
   padding: 20px;
   border-radius: 8px;
 }
+.filtros{
+  width: 40%;
+  display: flex;
+  justify-items: right;
+}
 
 @media screen and (max-width: 1024px) {
   #card {

@@ -13,7 +13,8 @@ const URI1 = 'https://sistema-novedades-backend.onrender.com/identificaciones/'
 const ListaIdent = ({ user }) => {
 
   const [identificaciones, setIdentificaciones] = useState([])
-
+  const [filtroNombre, setFiltroNombre] = useState('');
+  const [filtroApellido, setFiltroApellido] = useState('')
 
   useEffect(() => {
     getIdentificaciones()
@@ -37,14 +38,35 @@ const ListaIdent = ({ user }) => {
       console.error("Error al eliminar identificacion", error);
     }
   }
+  const filteredIdentificaciones = identificaciones.filter(identificacion => 
+    identificacion.nombre.toLowerCase().includes(filtroNombre.toLowerCase())||
+    identificacion.apellido.toLowerCase().includes(filtroApellido.toLowerCase()
+  )
+);
+
+  const handleFilterChange = (e) => {
+    setFiltroNombre(e.target.value);
+    setFiltroApellido(e.target.value);
+  };
+ 
 
   return (
     <>
       <h2>Lista Identificaciones</h2>
+
+      <div className="filtros">
+        <input
+          type="text"
+          placeholder="Filtrar por Nombre o Apellido"
+          value={(filtroNombre, filtroApellido)}
+          onChange={handleFilterChange}
+        />
+      </div>
+            
 <div className="container-cards">
 
       <div className="cards">
-        {identificaciones.map((identificacion) => (
+        {filteredIdentificaciones.map((identificacion) => (
           <div key={identificacion.id} id="card">
             <div className="headerCard">
               <img src={identificacion.img} alt="imagen" />
