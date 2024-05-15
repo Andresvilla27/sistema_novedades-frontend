@@ -34,9 +34,11 @@
   #card {
     width: calc(100% - 20px);
   }
+  .filtros{
+    width: 100%;
+  }
 }
 
-  
   .headerCard {
     padding: 10px;
     background-color: #f2f2f2;

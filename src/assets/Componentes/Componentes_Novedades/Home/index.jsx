@@ -1,13 +1,12 @@
 import './index.css'
 import { Outlet, Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect} from 'react';
 
 
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 function Home({ user, setUser }) {
     
-
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -20,7 +19,7 @@ function Home({ user, setUser }) {
         setUser('')
         navigate('/')
     }
-
+ 
     return (
         <>
                 <div className='container-fluid  home'>
@@ -51,6 +50,9 @@ function Home({ user, setUser }) {
                     </ul>
                     <hr />
                     <Outlet />
+                    <footer>
+                        <p className='footer'>Desarrollado por Andres Villafañe</p>
+                    </footer>
                 </div>
           
 
