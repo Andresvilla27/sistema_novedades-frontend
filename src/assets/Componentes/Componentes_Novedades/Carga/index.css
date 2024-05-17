@@ -6,6 +6,11 @@
     flex-wrap: wrap;
     justify-content: space-around;
   }
+  .fecha_label{
+  position: sticky;
+  color: gray;
+  left: 2rem;
+  }
   
   input,
   select,

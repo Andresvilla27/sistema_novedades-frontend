@@ -55,7 +55,6 @@ const CargaIdent = () => {
       setIsLoading(false);
     }
   };
-
   return (
     <>
       <div>
@@ -73,6 +72,7 @@ const CargaIdent = () => {
             </div>
           </div>
         )}
+        
         <form onSubmit={store} >
           <h4 className="form-titulo">Carga de Identificacion</h4>
           <input type="text" name="nombres" placeholder='Ingrese el Nombre' value={nombre} onChange={(e) => setNombre(e.target.value)} required />
@@ -80,6 +80,7 @@ const CargaIdent = () => {
           <input type="number" name="dni" placeholder='Ingrese el DNI' value={dni} onChange={(e) => setDni(e.target.value)} required />
           <input type="number" name="edad" placeholder='Ingrese la Edad' value={edad} onChange={(e) => setEdad(e.target.value)} required />
           <input type="text" name="alias" placeholder='Ingrese el Alias' value={alias} onChange={(e) => setAlias(e.target.value)} required />
+          <label htmlFor="fecha_nac">Fecha de Nacimiento</label>
           <input type="date" name="fecha_nac" placeholder='Ingrese la Fecha' value={fecha_nac} onChange={(e) => setFecha_nac(e.target.value)} required />
           <input type="text" name="domicilio" placeholder='Ingrese el Domicilio' value={domicilio} onChange={(e) => setDomicilio(e.target.value)} required />
           <input type="text" name="ocupacion" placeholder='Ingrese la Ocupacion' value={ocupacion} onChange={(e) => setOcupacion(e.target.value)} required />

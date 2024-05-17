@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import './index.css'
+import ScrollTopButton from "../../../Scroll-button"
 
 
 //desarrollo local
@@ -87,6 +88,7 @@ const ListaIdent = ({ user }) => {
           </div>
         ))}
       </div>
+        <ScrollTopButton />
 </div>
 
     </>

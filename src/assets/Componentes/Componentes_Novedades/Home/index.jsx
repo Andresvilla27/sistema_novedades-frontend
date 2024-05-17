@@ -32,7 +32,7 @@ function Home({ user, setUser }) {
                         <button className='btn btn-logout' onClick={handleLogout}>Cerrar Sesion</button>
                     </div>
                     <h1 className="titulo">Sistema de Novedades</h1>
-                    <p className='descripcion'>En este sitio usted podra realizar la carga de novedades de relevancia, identificacion de personas. Tambien podra consultar las novedades surgidas en un periodo de 7 dias, y las identificaciones en un periodo de 30 dias.
+                    <p className='descripcion'>En este sitio usted podra realizar la carga de novedades de relevancia, identificacion de personas. Tambien podra consultar las novedades surgidas en un periodo de 14 dias, y las identificaciones en un periodo de 30 dias.
                     </p>
                     <h4>A continuacion seleccione una opcion:</h4>
                     <ul className="d-flex" >

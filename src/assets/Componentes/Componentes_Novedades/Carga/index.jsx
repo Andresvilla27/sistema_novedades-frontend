@@ -50,6 +50,8 @@ const Carga = () => {
         setIsLoading(false);
     }
     }
+    
+
     return (
         <><div>
             {isLoading && (
@@ -69,7 +71,8 @@ const Carga = () => {
             <form method="post" className="form-register" onSubmit={store}>
                 <h4 className="form-titulo">Carga de Novedad</h4>
                 <div className="contenedor ">
-                    <input type="date" id="fecha" name="fecha" placeholder="fecha" required value={fecha} onChange={(e) => setFecha(e.target.value)} />
+                    <label htmlFor="fecha" className='fecha_label' >Fecha Actual</label>
+                    <input type="date" name="fecha" placeholder="fecha" required value={fecha} onChange={(e) => setFecha(e.target.value)} />
                     <input type="text" id="lugar" name="lugar" placeholder="lugar" required value={lugar} onChange={(e) => setLugar(e.target.value)} />
                     <input type="tipo_novedad" id="tipo_novedad" name="tipo_novedad" placeholder="tipo de novedad" required value={tipoNovedad} onChange={(e) => setTipoNovedad(e.target.value)} />
                     <select onChange={(e) => setComisaria(e.target.value)}>
@@ -104,6 +107,7 @@ const Carga = () => {
                         <option value='MT-962'>MT-962</option>
                         <option value="UB-99">UB-99</option>
                         <option value="UB-100">UB-100</option>
+                        <option value="UB-101">UB-101</option>
                     </select>
                     <input type="text" id="personal_interviniente" name="personal_interviniente" placeholder="Personal Interviniente" required value={personalInterv} onChange={(e) => setPersonalInterv(e.target.value)} />
                     <textarea type="text" name="resumen" id="resumen" placeholder='Resumen de Novedad' value={resumen} onChange={(e) => setResumen(e.target.value)} required/>
