@@ -25,9 +25,9 @@ function Home({ user, setUser }) {
                 <div className='container-fluid  home'>
                     <div className='nav'>
                         <span className='logos'>
-                            <img src="https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-upm.jpeg?alt=media&token=59d51466-5f94-4537-ae96-b1db10564cbc" alt="logo-upm" className='logo-upm' />
-                            <img src="https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-utm.jpeg?alt=media&token=f945d979-1c8b-4ee2-800a-206809ad20bf" alt="logo-utm" className='logo-utm' />
-                            <img src="https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-policia-1.jpeg?alt=media&token=050caf7d-1529-48aa-8f6e-c16f12c140eb" alt="logo-policia" className='logo-policia-1' />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-upm.jpeg?alt=media&token=32a16b6b-8ccd-428d-beed-2cf253980737" alt="logo-upm" className='logo-upm' />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-utm.jpeg?alt=media&token=f51010f5-6504-452e-ba85-5eca4e698b2c" alt="logo-utm" className='logo-utm' />
+                            <img src="https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-policia-1.jpeg?alt=media&token=5efa1e29-f748-4f59-82d3-2a472ef93d40" alt="logo-policia-1" className='logo-policia-1' />
                         </span>
                         <button className='btn btn-logout' onClick={handleLogout}>Cerrar Sesion</button>
                     </div>

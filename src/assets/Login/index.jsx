@@ -17,8 +17,8 @@ function Login({ setUser }) {
 
   // eslint-disable-next-line no-unused-vars
   const [images, setImages] = useState([
-    "https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-upm.jpeg?alt=media&token=59d51466-5f94-4537-ae96-b1db10564cbc",
-    "https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-utm.jpeg?alt=media&token=f945d979-1c8b-4ee2-800a-206809ad20bf"
+    "https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-upm.jpeg?alt=media&token=32a16b6b-8ccd-428d-beed-2cf253980737",
+    "https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-utm.jpeg?alt=media&token=f51010f5-6504-452e-ba85-5eca4e698b2c"
   ]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -126,7 +126,7 @@ function Login({ setUser }) {
           <div className="panel left-panel">
             <div className="content">
             </div>
-            <img src='https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-policia.png?alt=media&token=e6707323-e4e0-4e90-b97a-f521f02a3910' className='image' alt="logo-policia" />
+            <img src='https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-policia.png?alt=media&token=93a426c0-6085-4fea-9398-31727fd273e6' className='image' alt="logo-policia" />
           </div>
         </div>
       </div>

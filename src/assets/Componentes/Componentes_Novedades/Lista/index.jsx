@@ -2,7 +2,7 @@
 import axios from "axios";
 import "../Lista/index.css";
 import { useState, useEffect } from "react";
-
+import ScrollTopButton from "../../../Scroll-button";
 
 
 //desarrollo local
@@ -87,6 +87,7 @@ const Lista = ({ user }) => {
             ))}
           </tbody>
         </table>
+        <ScrollTopButton />
       </div>
     </>
   );
