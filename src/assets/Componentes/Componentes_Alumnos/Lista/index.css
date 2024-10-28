@@ -1,16 +1,12 @@
 /* index.css */
 .contenedor {
-  /* width: 100%; */
-  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   overflow-x: auto;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-}
-
-@media (min-width: 1200px) {
-  .contenedor {
-    width: 95% !important;
-  }
 }
 
 h4 {
@@ -21,11 +17,11 @@ h4 {
   text-align: left;
   vertical-align: middle;
   width: 100%;
-  min-width: 600px;
-  table-layout: fixed;
+  max-width: 100%;
+  table-layout: auto;
   border-collapse: collapse;
-  text-align: right;
-  
+  text-align: justify;
+  margin-left: 3em;
 }
 
 .btn {
@@ -45,7 +41,7 @@ h4 {
   box-shadow: 0 0 15px 5px #9e0101;
 }
 
-th, td {
+th {
   text-align: center;
 }
 
@@ -62,36 +58,4 @@ th, td {
   color: blue;
 }
 
-.botones-modal{
-  
-  display: flex;
-}
 
-@media (max-width: 768px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-
-  thead tr {
-    display: none;
-  }
-
-  .contenido {
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-
-  .contenido td {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .contenido td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    width: 70%;
-  }
-}

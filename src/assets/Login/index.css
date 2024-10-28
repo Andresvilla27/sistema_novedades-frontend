@@ -89,36 +89,6 @@
     font-weight: 500;
   } 
   
-  
-  
-   
-  
-  .btn-login {
-   border: 1.5px solid #4f8aba;
-   width: auto;
-   color: #416c8a;
-   font-weight: 700;
-   border-radius: 20px;
-   margin: 25px;
-   overflow: hidden;
-   position: relative;
-} 
-  
-  .btn-login::before { 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, #00fffc, transparent);
-    transform: translateX(-100%);
-    transition: 0.5s;
-    position: absolute;
-  }   
-  .btn-login:hover{
-    /* background: transparent; */
-    box-shadow: 0 0 20px 5px #4f8aba;
-    color: #fff;
-}
   .panels-container { 
     position: absolute; 
     height: 100%; 
