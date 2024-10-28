@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './index.css';
 
 
@@ -16,24 +16,7 @@ function Login({ setUser }) {
 
 
   // eslint-disable-next-line no-unused-vars
-  const [images, setImages] = useState([
-    "https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-upm.jpeg?alt=media&token=59d51466-5f94-4537-ae96-b1db10564cbc",
-    "https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-utm.jpeg?alt=media&token=f945d979-1c8b-4ee2-800a-206809ad20bf"
-  ]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
-    }, 2000); 
-
-    return () => clearInterval(interval);
-  }, [images]);
-
-
-
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -43,7 +26,7 @@ function Login({ setUser }) {
         setIsLoading(false);
         return;
       }
-      const response = await axios.post(/* 'http://localhost:8000/logins/' */ 'https://sistema-novedades-backend.onrender.com/logins', {
+      const response = await axios.post( 'http://localhost:8000/logins/'  /* 'https://sistema-novedades-backend.onrender.com/logins' */, {
         username,
         password
       });
@@ -58,7 +41,6 @@ function Login({ setUser }) {
     }
 
   };
-
 
   return (
     <>
@@ -78,21 +60,13 @@ function Login({ setUser }) {
                   <div className='loading'>
                     <div>
 
-                      {images.map((image, index) => (
-                        <img
-                          key={index}
-                          src={image}
-                          alt={`Imagen ${index + 1}`}
-                          className={`circle-image ${currentIndex === index ? 'active' : ''}`}
-                          style={{ transform: `translate(-50%, -50%) rotateY(${currentIndex * 120}deg)` }}
-                        />
-                      ))}
-
+                      
                     </div>
             </div>
           </div>
         )}
         <div className="forms-container">
+        
           <div className="signin-signup">
             <form onSubmit={handleSubmit} className="sign-in-form">
               {error && <p className='error-msg'>{error}</p>}
@@ -126,7 +100,7 @@ function Login({ setUser }) {
           <div className="panel left-panel">
             <div className="content">
             </div>
-            <img src='https://firebasestorage.googleapis.com/v0/b/novedades-prevencion.appspot.com/o/img_logo%2Flogo-policia.png?alt=media&token=e6707323-e4e0-4e90-b97a-f521f02a3910' className='image' alt="logo-policia" />
+            
           </div>
         </div>
       </div>
