@@ -1,7 +1,8 @@
 {
   "projects": {
-    "default": "novedades-prevencion",
-    "novedades_identificaciones": "novedades-prevencion"
+    "default": "novedades-identificaciones",
+    "novedades_identificaciones": "novedades-prevencion",
+    "sistema-novedades-identificaciones": "novedades-identificaciones"
   },
   "targets": {},
   "etags": {}

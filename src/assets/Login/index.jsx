@@ -16,7 +16,28 @@ function Login({ setUser }) {
 
 
   // eslint-disable-next-line no-unused-vars
+<<<<<<< HEAD
  
+=======
+  const [images, setImages] = useState([
+    "https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-upm.jpeg?alt=media&token=32a16b6b-8ccd-428d-beed-2cf253980737",
+    "https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-utm.jpeg?alt=media&token=f51010f5-6504-452e-ba85-5eca4e698b2c"
+  ]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex(prevIndex => (prevIndex + 1) % images.length);
+    }, 2000); 
+
+    return () => clearInterval(interval);
+  }, [images]);
+
+
+
+
+>>>>>>> f72fa83306968f94391aa697d6dc1e056b622751
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -100,7 +121,11 @@ function Login({ setUser }) {
           <div className="panel left-panel">
             <div className="content">
             </div>
+<<<<<<< HEAD
             
+=======
+            <img src='https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-policia.png?alt=media&token=93a426c0-6085-4fea-9398-31727fd273e6' className='image' alt="logo-policia" />
+>>>>>>> f72fa83306968f94391aa697d6dc1e056b622751
           </div>
         </div>
       </div>

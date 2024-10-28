@@ -89,6 +89,7 @@
     font-weight: 500;
   } 
   
+<<<<<<< HEAD
   
   
    
@@ -119,6 +120,8 @@
     box-shadow: 0 0 20px 5px #4f8aba;
     color: #fff;
 }
+=======
+>>>>>>> f72fa83306968f94391aa697d6dc1e056b622751
   .panels-container { 
     position: absolute; 
     height: 100%; 
