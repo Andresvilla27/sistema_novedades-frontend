@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './index.css';
 
 
@@ -16,6 +16,7 @@ function Login({ setUser }) {
 
 
   // eslint-disable-next-line no-unused-vars
+<<<<<<< HEAD
   const [images, setImages] = useState([
     "https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-upm.jpeg?alt=media&token=32a16b6b-8ccd-428d-beed-2cf253980737",
     "https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-utm.jpeg?alt=media&token=f51010f5-6504-452e-ba85-5eca4e698b2c"
@@ -34,6 +35,9 @@ function Login({ setUser }) {
 
 
 
+=======
+ 
+>>>>>>> e4735d0 (cambio de proyecto)
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -43,7 +47,7 @@ function Login({ setUser }) {
         setIsLoading(false);
         return;
       }
-      const response = await axios.post(/* 'http://localhost:8000/logins/' */ 'https://sistema-novedades-backend.onrender.com/logins', {
+      const response = await axios.post( 'http://localhost:8000/logins/'  /* 'https://sistema-novedades-backend.onrender.com/logins' */, {
         username,
         password
       });
@@ -58,7 +62,6 @@ function Login({ setUser }) {
     }
 
   };
-
 
   return (
     <>
@@ -78,21 +81,13 @@ function Login({ setUser }) {
                   <div className='loading'>
                     <div>
 
-                      {images.map((image, index) => (
-                        <img
-                          key={index}
-                          src={image}
-                          alt={`Imagen ${index + 1}`}
-                          className={`circle-image ${currentIndex === index ? 'active' : ''}`}
-                          style={{ transform: `translate(-50%, -50%) rotateY(${currentIndex * 120}deg)` }}
-                        />
-                      ))}
-
+                      
                     </div>
             </div>
           </div>
         )}
         <div className="forms-container">
+        
           <div className="signin-signup">
             <form onSubmit={handleSubmit} className="sign-in-form">
               {error && <p className='error-msg'>{error}</p>}
@@ -126,7 +121,11 @@ function Login({ setUser }) {
           <div className="panel left-panel">
             <div className="content">
             </div>
+<<<<<<< HEAD
             <img src='https://firebasestorage.googleapis.com/v0/b/novedades-identificaciones.appspot.com/o/img_logo%2Flogo-policia.png?alt=media&token=93a426c0-6085-4fea-9398-31727fd273e6' className='image' alt="logo-policia" />
+=======
+            
+>>>>>>> e4735d0 (cambio de proyecto)
           </div>
         </div>
       </div>

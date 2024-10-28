@@ -1,15 +1,13 @@
 
 import './App.css'
 import { Routes, Route } from 'react-router-dom';
-import Home from './assets/Componentes/Componentes_Novedades/Home'
-import Login from './assets/Login'
-import Carga from './assets/Componentes/Componentes_Novedades/Carga'
-import Lista from './assets/Componentes/Componentes_Novedades/Lista'
-import CargaIdent from './assets/Componentes/Componentes_Identificaciones/CargaIdent';
-import ListaIdent from './assets/Componentes/Componentes_Identificaciones/ListaIdent';
-import CargaUsuario from './assets/Componentes/Componentes_Usuarios/NuevoUsuario';
-import ListaUsuarios from './assets/Componentes/Componentes_Usuarios/ListaUsuario';
 import { useState } from 'react';
+import Home from './assets/Componentes/Componentes_Alumnos/Home'
+import ListaPagos from './assets/Componentes/Componentes_Pagos/ListaPagos';
+import CargaPagos from './assets/Componentes/Componentes_Pagos/CargaPagos';
+import ListaAlumnos from './assets/Componentes/Componentes_Alumnos/Lista';
+import CargaAlumno from './assets/Componentes/Componentes_Alumnos/Carga';
+import Login from './assets/Login/index'
 
 
 
@@ -20,21 +18,19 @@ function App() {
 
   return (
     <>
-      {
-        user ? (
+    {
+      user ? (
           <Routes>
             <Route path='/' element={<Home user={user} setUser={setUser} />} >
-              <Route path='Lista' element={<Lista user={user} />} />
-              <Route path='Carga' element={<Carga />} />
-              <Route path='ListaIdent' element={<ListaIdent user={user} />} />
-              <Route path='CargaIdent' element={<CargaIdent />} />
-              <Route path='CargaUsuario' element={<CargaUsuario />} />
-              <Route path='ListaUsuario' element={<ListaUsuarios user={user} />} />
+              <Route path='Lista' element={<ListaAlumnos user={user} />} />
+              <Route path='Carga' element={<CargaAlumno />} user={user} />
+              <Route path='ListaPagos' element={<ListaPagos user={user} />} />
+              <Route path='CargaPagos' element={<CargaPagos />} />
             </Route>
           </Routes>
-        ) : (
-          <Login setUser={setUser} />
-        )}
+      ) : (
+        <Login setUser={setUser} />
+      )}
     </>
   )
 }
