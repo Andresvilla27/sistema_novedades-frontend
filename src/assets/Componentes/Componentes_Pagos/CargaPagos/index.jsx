@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -49,9 +48,22 @@ const CargaPagos = () => {
     }
   };
 
+  // Validar importe
+  const validateImporte = (value) => {
+    const numberValue = parseFloat(value);
+    return !isNaN(numberValue) && numberValue > 0; // Verifica que sea un número positivo
+  };
+
   // Guardar el pago
   const store = async (e) => {
     e.preventDefault();
+
+    // Validar el importe antes de enviar el formulario
+    if (!validateImporte(importe)) {
+      alert("El importe debe ser un número positivo.");
+      return;
+    }
+
     try {
       await axios.post(URI_PAGOS, {
         nombres: nombres,
@@ -74,18 +86,8 @@ const CargaPagos = () => {
         <form onSubmit={store}>
           <h4 className="form-titulo">Carga de Pago de Cuotas</h4>
 
-          {/* Input para ingresar el DNI */}
-          {/* <input
-            type="text"
-            name="dni"
-            placeholder="Ingrese el DNI del alumno"
-            value={dni}
-            onChange={(e) => handleDniChange(e.target.value)} // Manejar el cambio en el DNI
-            required
-          /> */}
-
-           {/* Dropdown para seleccionar un alumno por DNI */}
-           <select
+          {/* Dropdown para seleccionar un alumno por DNI */}
+          <select
             name="dni"
             value={dni}
             onChange={(e) => handleDniChange(e.target.value)} // Manejar la selección del alumno

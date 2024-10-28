@@ -1,12 +1,17 @@
 /* index.css */
 .contenedor {
-  width: 100vw;
+  /* width: 100%; */
   max-width: 100%;
-  overflow-x: auto; /* Para hacer desplazable en pantallas pequeñas */
+  overflow-x: auto;
   margin: 0;
   padding: 0;
 }
 
+@media (min-width: 1200px) {
+  .contenedor {
+    width: 95% !important;
+  }
+}
 
 h4 {
   padding: 20px;
@@ -16,6 +21,7 @@ h4 {
   text-align: left;
   vertical-align: middle;
   width: 100%;
+  min-width: 600px;
   table-layout: fixed;
   border-collapse: collapse;
   text-align: right;
@@ -60,8 +66,32 @@ th, td {
   
   display: flex;
 }
-@media (min-width: 1200px) {
-  .contenedor {
-    width: 95%;
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  .contenido {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+
+  .contenido td {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .contenido td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    width: 70%;
   }
 }
